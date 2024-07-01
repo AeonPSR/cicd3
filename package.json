@@ -1,0 +1,21 @@
+{
+  "name": "tp3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "test:TU": "mocha test/unit/*",
+    "test:TI": "mocha test/integration/*",
+    "test:all": "npm run test:TU && npm run test:TI"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.1",
+    "express": "^4.19.2",
+    "mocha": "^10.4.0",
+    "supertest": "^7.0.0"
+  }
+}
