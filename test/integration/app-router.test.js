@@ -8,7 +8,7 @@ describe('Integration Tests', () => {
             .get('/sum/5/3')
             .expect(200)
             .then(response => {
-                assert.fail('You must implement the test');
+                assert.strictEqual(response.body.result, 8);
             });
     });
 
@@ -17,7 +17,7 @@ describe('Integration Tests', () => {
             .get('/mult/5/3')
             .expect(200)
             .then(response => {
-                assert.fail('You must implement the test');
+                assert.strictEqual(response.body.result, 15);
             });        
     });
 
@@ -26,7 +26,7 @@ describe('Integration Tests', () => {
             .get('/div/10/2')
             .expect(200)
             .then(response => {
-                assert.fail('You must implement the test');
+                assert.strictEqual(response.body.result, 5);
             })
     });
 
@@ -35,7 +35,7 @@ describe('Integration Tests', () => {
             .get('/substract/10/5')
             .expect(200)
             .then(response => {
-                assert.fail('You must implement the test');
+                assert.strictEqual(response.body.result, 5);
             });
     });
 });

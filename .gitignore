@@ -1,0 +1,38 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore npm debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore log files
+logs
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore editor directories and files
+.idea/
+.vscode/
+
+# Ignore environment variables file
+.env
+
+# Ignore coverage directory used by testing tools
+coverage/
+
+# Ignore build output directories
+dist/
+build/
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore other system files
+.sass-cache/
+.eslintcache
+.node_repl_history
