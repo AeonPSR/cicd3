@@ -28,13 +28,13 @@ jobs:
         run: npm run test:all
 
       - name: Build Docker image
-        run: docker build -t my-node-app .
+        run: docker build -t aeonpsr/cicd3_test:latest .
 
       - name: Test Docker image
-        run: docker run --rm my-node-app
+        run: docker run --rm aeonpsr/cicd3_test:latest
 
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
 
       - name: Push Docker image
-        run: docker push my-node-app
+        run: docker push aeonpsr/cicd3_test:latest
