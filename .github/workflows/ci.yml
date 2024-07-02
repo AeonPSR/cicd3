@@ -32,3 +32,9 @@ jobs:
 
       - name: Test Docker image
         run: docker run --rm my-node-app
+
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
+      - name: Push Docker image
+        run: docker push my-node-app
